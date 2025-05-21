@@ -1,26 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import Product from "./components/Product";
+import Cart from "./components/Cart";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <header>
-      <h1>My Store </h1>
-      <hr />
-      </header>
-      <main>
-        <h2>Product List</h2>
-      </main>
-      <hr />
-      <footer>
-        &copr;All Rights Are Reserved.
-      </footer>
-    </>
-  )
-}
+    <div>
+      <BrowserRouter>
+        <header>
+          <h1>My Online Shop</h1>
+          <Link to="/">Home</Link>-
+          <Link to="/cart">Cart</Link>-
+          <Link to="/Login">Login</Link>
+          <hr />
+        </header>
 
-export default App
+        <main>
+          <Routes>
+            <Route index element={<Product />} />
+            <Route path="/" element={<Product/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="/login" element={<Login/>}></Route>
+          </Routes>
+        </main>
+
+        <footer>
+          <hr />
+          &copy; 2005. All rights Reserved.
+        </footer>
+      </BrowserRouter>
+    </div>
+  );
+}
+export default App;

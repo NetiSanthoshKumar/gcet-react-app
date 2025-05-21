@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>My Store </h1>
+      <h1>My Store By Santhosh</h1>
     </>
   )
 }

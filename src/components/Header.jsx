@@ -42,7 +42,7 @@ export default function Header() {
           Order
         </Link>
         -
-        {user.token ? (
+        {user.email? (
           <Link to="/logout" style={linkStyle}>
             Logout
           </Link>

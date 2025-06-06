@@ -1,11 +1,54 @@
+/* Container for the product cards */
 .App-Product-Row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
+/* Individual product card */
 .App-Product-Row div {
-    padding: 5px;
-    margin: 5px;
-    border: 1px solid gray;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: #f8f8f8;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.App-Product-Row div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Product name */
+.App-Product-Row h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Product price */
+.App-Product-Row h4 {
+  color: #4CAF50;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart button */
+.App-Product-Row button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.App-Product-Row button:hover {
+  background-color: #388e3c;
 }
